@@ -22,7 +22,7 @@ int main() {
 }
 ```
 
-You can see that the hash `1097005601` has been generated from the relevant string, but note that in this case 32-bits have been used. Of course you can also call other functions, from which just a hash can be generated, since for example `void*` is used to allow various types. If you want to generate a hash of a string, this string must exist, because `const char used_string [static 1]` is used in the implementation.
+You can see that the hash `1097005601` has been generated from the relevant string, but note that in this case 32-bits have been used. Of course, you can also call other functions, from which just a hash can be generated, since for example `void*` is used to allow various types. If you want to generate a hash of a string, this string must exist, because `const char used_string [static 1]` is used in the implementation.
 
 ## Supported hash sizes
 

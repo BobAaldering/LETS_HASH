@@ -12,11 +12,11 @@
     #define FNV_OFFSET_BASIS (0xcbf29ce484222325)
 #endif
 
-int get_hash_bits() {
+__attribute__((unused)) int get_hash_bits() {
     return HASH_BITS;
 }
 
-hash_value_t hash_djb2_generic(const void *data, size_t size_data) {
+__attribute__((unused)) hash_value_t hash_djb2_generic(const void *data, size_t size_data) {
     const unsigned char* data_single_byte = data;
     hash_value_t hash_value = DJB2_OFFSET;
 
@@ -28,7 +28,7 @@ hash_value_t hash_djb2_generic(const void *data, size_t size_data) {
     return hash_value;
 }
 
-hash_value_t hash_djb2_string(const char used_string[static 1]) {
+__attribute__((unused)) hash_value_t hash_djb2_string(const char used_string[static 1]) {
     hash_value_t hash_value = DJB2_OFFSET;
 
     while (*used_string)
@@ -37,7 +37,7 @@ hash_value_t hash_djb2_string(const char used_string[static 1]) {
     return hash_value;
 }
 
-hash_value_t hash_fnv_generic(const void *data, size_t size_data) {
+__attribute__((unused)) hash_value_t hash_fnv_generic(const void *data, size_t size_data) {
     const unsigned char* data_single_byte = data;
     hash_value_t hash_value = FNV_OFFSET_BASIS;
 
@@ -49,7 +49,7 @@ hash_value_t hash_fnv_generic(const void *data, size_t size_data) {
     return hash_value;
 }
 
-hash_value_t hash_fnv_string(const char used_string[static 1]) {
+__attribute__((unused)) hash_value_t hash_fnv_string(const char used_string[static 1]) {
     hash_value_t hash_value = FNV_OFFSET_BASIS;
 
     while (*used_string) {
@@ -60,10 +60,10 @@ hash_value_t hash_fnv_string(const char used_string[static 1]) {
     return hash_value;
 }
 
-size_t hash_index_generic(const void *data, size_t size_data, size_t modulo_division) {
+__attribute__((unused)) size_t hash_index_generic(const void *data, size_t size_data, size_t modulo_division) {
     return hash_fnv_generic(data, size_data) % modulo_division;
 }
 
-size_t hash_index_string(const char *used_string, size_t modulo_division) {
+__attribute__((unused)) size_t hash_index_string(const char *used_string, size_t modulo_division) {
     return hash_fnv_string(used_string) % modulo_division;
 }

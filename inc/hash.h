@@ -22,15 +22,15 @@
     #endif
 #endif
 
-extern int get_hash_bits();
+__attribute__((unused)) extern int get_hash_bits();
 
-extern hash_value_t hash_djb2_generic(const void* data, size_t size_data);
-extern hash_value_t hash_djb2_string(const char used_string[static 1]);
+__attribute__((unused)) extern hash_value_t hash_djb2_generic(const void* data, size_t size_data);
+__attribute__((unused)) extern hash_value_t hash_djb2_string(const char used_string[static 1]);
 
-extern hash_value_t hash_fnv_generic(const void* data, size_t size_data);
-extern hash_value_t hash_fnv_string(const char used_string[static 1]);
+__attribute__((unused)) extern hash_value_t hash_fnv_generic(const void* data, size_t size_data);
+__attribute__((unused)) extern hash_value_t hash_fnv_string(const char used_string[static 1]);
 
-extern size_t hash_index_generic(const void* data, size_t size_data, size_t modulo_division);
-extern size_t hash_index_string(const char* used_string, size_t modulo_division);
+__attribute__((unused)) extern size_t hash_index_generic(const void* data, size_t size_data, size_t modulo_division);
+__attribute__((unused)) extern size_t hash_index_string(const char* used_string, size_t modulo_division);
 
 #endif
