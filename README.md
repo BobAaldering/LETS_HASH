@@ -1,6 +1,6 @@
 # Do you want a hash?
 
-##### Pay attention! This repository is currently under construction! Functions will be added to it.
+##### Pay attention! This repository is currently under construction! Functions will be added to it. Extra notice: this project is on the long run. When school projects are finished, this project will be continued.
 
 The mother of all programming languages, that is of course C! Everyone knows, of course, that C itself does not have many data structures, such as a hash map for example. In addition, of course, it also has no hash function. For this reason, this repository provides an implementation of several hash functions, in this case `Fowler-Noll-Vo 1A` (also called `FNV-1A`) and the `dbj2` hash functions.
 
